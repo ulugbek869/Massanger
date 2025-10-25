@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+    <style>
+        li{
+            list-style: none;
+        }
+        /* Umumiy sahifa dizayni */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+div[container] {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 380px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+div[container]:hover {
+  transform: translateY(-3px);
+}
+
+/* Input */
+#inp {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+#inp:focus {
+  border-color: #66a6ff;
+  box-shadow: 0 0 6px rgba(102, 166, 255, 0.6);
+}
+
+/* Tugmalar */
+#send, #clear {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 5px;
+  transition: 0.3s;
+  color: white;
+}
+
+#send {
+  background-color: #4CAF50;
+}
+
+#send:hover {
+  background-color: #43a047;
+}
+
+#clear {
+  background-color: #e53935;
+}
+
+#clear:hover {
+  background-color: #c62828;
+}
+
+/* Ro'yxat */
+#list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Har bir element (li) */
+#list li {
+  background: #f8f8f8;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+#list li:hover {
+  background: #f0f0f0;
+  transform: scale(1.02);
+}
+
+/* Li ichidagi tugmalar */
+#list li button {
+  margin-left: 8px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Delete tugmasi */
+#list li button:first-of-type {
+  background-color: #f44336;
+  color: #fff;
+}
+
+#list li button:first-of-type:hover {
+  background-color: #d32f2f;
+}
+
+/* Edit tugmasi */
+#list li button:last-of-type {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+#list li button:last-of-type:hover {
+  background-color: #fb8c00;
+}
+
+/* Scroll bar (optional, chiroyli) */
+#list::-webkit-scrollbar {
+  width: 6px;
+}
+#list::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 3px;
+}
+/* Default Light Mode */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Night Mode */
+body.night {
+  background-color: #121212;
+  color: #eee;
+}
+    </style>
+</head>
+<body>
+    <div container>
+        <input type="text" id="inp" placeholder="Send massange">
+    <button id="send">Send</button>
+    <button id="clear">Clear All</button>
+    <ul id="list"></ul>
+    </div>
+</body>
+</html>
